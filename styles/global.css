@@ -1,0 +1,163 @@
+/**** Importation des polices ****/
+
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/**** Variables css ****/
+
+:root {
+    --white: #fffffe;
+    --light-grey: #f2f4f6;
+    --yellow: #fde24f;
+    --green: #00ebc7;
+    --red: #ff5470;
+    --blue: #00214d;
+    --dark-blue: #001534;
+    --light-blue: #b7c9e4;
+    --font-title: "Shrikhand", "cursive";
+    --font: "DM Sans", sans-serif;
+}
+
+/**** Reset ****/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    font-family: var(--font);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    font-weight: lighter;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/**** body ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+}
+
+/**** header ****/
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.logo,
+.subtitle {
+    text-align: center;
+}
+
+.logo {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.subtitle {
+    font-size: 26px;
+}
+
+/**** header, footer ****/
+
+header,
+footer {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+/**** main ****/
+
+main {
+    flex-grow: 1;
+}
+
+/**** btn ****/
+
+.btn {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/**** footer ****/
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer,
+.footer__lists {
+    margin-top: 20px;
+}
+
+.footer__title h2 {
+    text-align: center;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.footer__lists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-bottom: 20px;
+}
+
+.list__title {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.footer__list ul li {
+    padding-top: 8px;
+}
+
+.footer__list ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+.footer__list ul li a:hover {
+    color: var(--red);
+}
