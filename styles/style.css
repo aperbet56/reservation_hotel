@@ -93,3 +93,11 @@
         line-height: 1.8;
     }
 }
+
+/**** Responsive design version mobile ****/
+
+@media screen and (max-width: 767px) {
+    .container__image {
+        height: 350px;
+    }
+}
