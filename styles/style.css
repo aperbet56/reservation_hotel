@@ -6,6 +6,8 @@
     background-color: var(--light-grey);
 }
 
+/**** div container__image ****/
+
 .container__image {
     width: 75%;
     height: 700px;
@@ -16,6 +18,8 @@
     height: 100%;
     object-fit: cover;
 }
+
+/**** aside container__details ****/
 
 .container__details {
     width: 25%;
@@ -67,4 +71,25 @@
 
 .btn:hover {
     background-color: var(--green);
+}
+
+/**** Responsive design version tablette ****/
+
+@media screen and (max-width: 991px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container__image,
+    .container__details {
+        width: 100%;
+    }
+
+    .container__image {
+        height: 500px;
+    }
+
+    .container__details__text {
+        line-height: 1.8;
+    }
 }
