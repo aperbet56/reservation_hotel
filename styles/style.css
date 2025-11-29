@@ -98,6 +98,10 @@
         height: 500px;
     }
 
+    .container__details {
+        margin-top: 25px;
+    }
+
     .container__details__text {
         line-height: 1.8;
     }
