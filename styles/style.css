@@ -52,8 +52,12 @@
     line-height: 1.5;
 }
 
-.container__details__price {
-    font-size: 30px;
+.container__details__price,
+.container__details__price span {
+    font-size: 24px;
+}
+
+.container__details__price span {
     color: var(--red);
 }
 
