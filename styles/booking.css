@@ -54,12 +54,12 @@
 }
 
 .panel__container__form label {
-    font-size: 20px;
     margin-bottom: 8px;
 }
 
 .panel__container__form label,
 .panel__container__form input {
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -74,7 +74,6 @@
     border-bottom: 2px solid var(--white);
     color: var(--white);
     padding-block: 6px;
-    font-size: 18px;
 }
 
 .panel__container__form input::placeholder {
@@ -83,25 +82,8 @@
     /* car dans le cas contraire le texte apparaît en gris sur Mozilla Firefox */
 }
 
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white);
-    padding: 12px;
-    border-radius: 12px;
-    cursor: pointer;
-    color: var(--blue);
-    margin-block: 25px;
-    transition: background-color 0.3s ease-in-out,
-}
-
 .btn i {
     padding-left: 8px;
-}
-
-.btn:hover {
-    background-color: var(--green);
 }
 
 /**** div panel__container__image ****/
