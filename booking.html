@@ -25,7 +25,70 @@
     <!-- Fin du header -->
 
     <!-- Début du main -->
-    <main class="main__content"></main>
+    <main class="main__content">
+      <!-- Début de la section panel__container-->
+      <section class="panel__container">
+        <!-- Début de l'article -->
+        <article class="panel__container__article">
+          <h2 class="panel__container__title">
+            Réserver la suite business | hôtel Margel
+          </h2>
+          <!-- Début du  formulaire -->
+          <form action="#" class="panel__container__form">
+            <label for="name">Votre nom :</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Dupont"
+              required
+            />
+
+            <label for="email">Votre email :</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="nom@contact.fr"
+              required
+            />
+
+            <label for="arrival">Date d'arrivée :</label>
+            <input type="date" name="arrival" id="arrival" required />
+
+            <label for="time__arrival">Heure d'arrivée :</label>
+            <input
+              type="time"
+              name="time__arrival"
+              id="time__arrival"
+              required
+            />
+
+            <label for="departure">Date de départ :</label>
+            <input type="date" name="departure" id="departure" required />
+
+            <label for="time__departure">Heure de départ :</label>
+            <input
+              type="time"
+              name="time__departure"
+              id="time__departure"
+              required
+            />
+            <button class="btn">
+              Valider la réservation
+              <i class="fas fa-check-circle"></i>
+            </button>
+          </form>
+          <!-- Fin du  formulaire -->
+        </article>
+        <!-- Fin de l'article panel__container__article -->
+
+        <!-- Début de la div panel__container__image -->
+        <div class="panel__container__image"></div>
+        <!-- Fin de la div panel__container__div -->
+      </section>
+      <!-- Fin de la section panel__container-->
+    </main>
     <!-- Fin du main -->
 
     <!-- Début du footer -->
@@ -40,7 +103,6 @@
           <h3 class="list__title">A propos</h3>
           <ul class="about">
             <li><a href="#">Fonctionnement du site</a></li>
-            <li><a href="#">Conditions générales de vente</a></li>
             <li><a href="#">Données et confidentialité</a></li>
           </ul>
         </div>
@@ -71,5 +133,8 @@
       <!-- Fin de la div footer__lists-->
     </footer>
     <!-- Fin du footer -->
+
+    <!-- Importation du fichier JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
