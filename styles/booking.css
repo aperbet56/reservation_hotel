@@ -1,0 +1,157 @@
+/**** main ****/
+
+.main__content {
+    padding: 20px 25px;
+}
+
+/**** section panel__container ****/
+
+.panel__container {
+    background-color: var(--dark-blue);
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    display: flex;
+    width: 100%;
+    height: 800px;
+    border-radius: 12px;
+}
+
+/**** article ****/
+
+.panel__container__article {
+    color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    position: relative;
+    width: 50%;
+}
+
+.panel__container__article::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 800px solid transparent;
+    border-left: 40px solid var(--dark-blue);
+}
+
+.panel__container__title {
+    text-align: center;
+    font-size: 24px;
+    text-transform: capitalize;
+    line-height: 1.3;
+    color: var(--white);
+}
+
+/**** formulaire ****/
+
+.panel__container__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel__container__form label {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.panel__container__form label,
+.panel__container__form input {
+    font-weight: 500;
+}
+
+.panel__container__title,
+.panel__container__form input {
+    margin-bottom: 25px;
+}
+
+.panel__container__form input {
+    text-align: center;
+    background-color: var(--dark-blue);
+    border-bottom: 2px solid var(--white);
+    color: var(--white);
+    padding-block: 6px;
+    font-size: 18px;
+}
+
+.panel__container__form input::placeholder {
+    color: var(--white);
+    opacity: 1;
+    /* car dans le cas contraire le texte apparaît en gris sur Mozilla Firefox */
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: var(--blue);
+    margin-block: 25px;
+    transition: background-color 0.3s ease-in-out,
+}
+
+.btn i {
+    padding-left: 8px;
+}
+
+.btn:hover {
+    background-color: var(--green);
+}
+
+/**** div panel__container__image ****/
+
+.panel__container__image {
+    background-image: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/**** Responsive design version tablette ****/
+
+@media screen and (max-width: 991px) {
+    .panel__container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .panel__container,
+    .panel__container__article {
+        height: auto;
+    }
+
+    .panel__container__article,
+    .panel__container__image {
+        width: 100%;
+    }
+
+    .panel__container__article::after {
+        display: none;
+    }
+
+    .panel__container__image {
+        height: 500px;
+        border-bottom-right-radius: 0;
+    }
+}
+
+/**** Responsive design version mobile ****/
+
+@media screen and (max-width: 767px) {
+    .panel__container__article {
+        padding: 20px;
+    }
+
+    .panel__container__image {
+        height: 350px;
+    }
+}
