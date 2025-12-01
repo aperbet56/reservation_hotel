@@ -103,6 +103,28 @@ const arrivalTimeValidation = (arrivalTimeInput) => {
 arrivalTimeValidation(arrivalTimeInput);
 
 /**
+ * Déclaration de la fonction departureTimeValidation pour la validation du champ arrivalDateInput
+ *  @param {Number} departureDateInput
+ */
+const departureDateValidation = (departureDateInput) => {
+  // Ecoute de l'événement "change" sur l'input departureDateInput
+  departureDateInput.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (departureDateInput.value.trim() == "") {
+      departureDateInput.style.borderColor = "var(--red)";
+      departureDateInput.style.color = "var(--red)";
+      return false;
+    } else {
+      departureDateInput.style.borderColor = "var(--green)";
+      departureDateInput.style.color = "var(--green)";
+      return true;
+    }
+  });
+};
+// Appel de la fonction departureDateValidation
+departureDateValidation(departureDateInput);
+
+/**
  * Déclaration de la fonction departureTimeValidation pour la validation du champ departureTimeInput
  *  @param {Number} departureTimeInput
  */
@@ -123,3 +145,38 @@ const departureTimeValidation = (departureTimeInput) => {
 };
 // Appel de la fonction departureTimeValidation
 departureTimeValidation(departureTimeInput);
+
+// Déclaration de la fonction submitForm qui va gérer la soumission du formulaire
+const submitForm = () => {
+  // Ecoute de l'événement "click" sur le bouton submitBtn
+  submitBtn.addEventListener("click", (e) => {
+    // Suppression du comportement par défaut
+    e.preventDefault();
+    if (
+      regexName.test(lastNameInput.value) === false ||
+      regexEmail.test(emailInput.value) === false ||
+      regexTime.test(arrivalTimeInput.value) === false ||
+      regexTime.test(departureTimeInput.value) === false ||
+      arrivalDateInput.value.trim() == "" ||
+      departureDateInput.value.trim() == ""
+    ) {
+      alert("Veuillez remplir correctement tous les champs du formulaire !");
+    } else {
+      // Création de l'objet contact
+      const contact = {
+        lastName: lastNameInput.value,
+        email: emailInput.value,
+        arrivalDate: arrivalDateInput.value,
+        arrivalTime: arrivalTimeInput.value,
+        departureDate: departureDateInput.value,
+        departureTime: departureTimeInput.value,
+      };
+      console.log(contact);
+      alert(
+        "Inscription confirmée ! Nous allons vous envoyer un mail contenant les dates de nos prochains évènements. Cordialement."
+      );
+    }
+  });
+};
+// Appel de la fonction submitForm()
+submitForm();
