@@ -59,7 +59,7 @@ const emailValidation = (emailInput) => {
 emailValidation(emailInput);
 
 /**
- * Déclaration de la fonction arrivalTimeValidation pour la validation du champ arrival__time
+ * Déclaration de la fonction arrivalTimeValidation pour la validation du champ arrivalTimeInput
  *  @param {Number} arrivalTimeInput
  */
 const arrivalTimeValidation = (arrivalTimeInput) => {
@@ -79,3 +79,25 @@ const arrivalTimeValidation = (arrivalTimeInput) => {
 };
 // Appel de la fonction arrivalTimeValidation
 arrivalTimeValidation(arrivalTimeInput);
+
+/**
+ * Déclaration de la fonction departureTimeValidation pour la validation du champ departureTimeInput
+ *  @param {Number} departureTimeInput
+ */
+const departureTimeValidation = (departureTimeInput) => {
+  // Ecoute de l'événement "input" sur l'input departureTimeInput
+  departureTimeInput.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (regexTime.test(departureTimeInput.value) === false) {
+      departureTimeInput.style.borderColor = "var(--red)";
+      departureTimeInput.style.color = "var(--red)";
+      return false;
+    } else {
+      departureTimeInput.style.borderColor = "var(--green)";
+      departureTimeInput.style.color = "var(--green)";
+      return true;
+    }
+  });
+};
+// Appel de la fonction departureTimeValidation
+departureTimeValidation(departureTimeInput);
