@@ -19,8 +19,8 @@ const regexTime = /^(2[0-3]|1[0-9]|0[0-9]):([0-5][0-9])$/;
  * @param {String} lastNameInput
  */
 const lastNameValidation = (lastNameInput) => {
-  // Ecoute de l'événement "change" sur l'input lastNameInput
-  lastNameInput.addEventListener("change", (e) => {
+  // Ecoute de l'événement "input" sur l'input lastNameInput
+  lastNameInput.addEventListener("input", (e) => {
     e.preventDefault();
     if (regexName.test(lastNameInput.value) === false) {
       lastNameInput.style.borderColor = "var(--red)";
@@ -37,12 +37,12 @@ const lastNameValidation = (lastNameInput) => {
 lastNameValidation(lastNameInput);
 
 /**
- * Déclaration de la fonction emailValidation pour la validation du champ nom
+ * Déclaration de la fonction emailValidation pour la validation du champ email
  *  @param {String} emailInput
  */
 const emailValidation = (emailInput) => {
-  // Ecoute de l'événement "change" sur l'input emailInput
-  emailInput.addEventListener("change", (e) => {
+  // Ecoute de l'événement "input" sur l'input emailInput
+  emailInput.addEventListener("input", (e) => {
     e.preventDefault();
     if (regexEmail.test(emailInput.value) === false) {
       emailInput.style.borderColor = "var(--red)";
@@ -57,3 +57,25 @@ const emailValidation = (emailInput) => {
 };
 // Appel de la fonction emailValidation
 emailValidation(emailInput);
+
+/**
+ * Déclaration de la fonction arrivalTimeValidation pour la validation du champ arrival__time
+ *  @param {Number} arrivalTimeInput
+ */
+const arrivalTimeValidation = (arrivalTimeInput) => {
+  // Ecoute de l'événement "input" sur l'input arrivalTimeInput
+  arrivalTimeInput.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (regexTime.test(arrivalTimeInput.value) === false) {
+      arrivalTimeInput.style.borderColor = "var(--red)";
+      arrivalTimeInput.style.color = "var(--red)";
+      return false;
+    } else {
+      arrivalTimeInput.style.borderColor = "var(--green)";
+      arrivalTimeInput.style.color = "var(--green)";
+      return true;
+    }
+  });
+};
+// Appel de la fonction arrivalTimeValidation
+arrivalTimeValidation(arrivalTimeInput);
