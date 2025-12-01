@@ -146,6 +146,12 @@ const departureTimeValidation = (departureTimeInput) => {
 // Appel de la fonction departureTimeValidation
 departureTimeValidation(departureTimeInput);
 
+// Déclaration de la fonction resetForm permettant une remise à zéro des inputs
+const resetForm = () => {
+  window.location.href = "index.html";
+  window.scrollTo(0, 0);
+};
+
 // Déclaration de la fonction submitForm qui va gérer la soumission du formulaire
 const submitForm = () => {
   // Ecoute de l'événement "click" sur le bouton submitBtn
@@ -173,8 +179,10 @@ const submitForm = () => {
       };
       console.log(contact);
       alert(
-        "Inscription confirmée ! Nous allons vous envoyer un mail contenant les dates de nos prochains évènements. Cordialement."
+        "Réservation confirmée ! Nous allons vous envoyer un mail de confirmation sous 24 heaures. Cordialement."
       );
+      // Appel de la fonction resetForm()
+      resetForm();
     }
   });
 };
