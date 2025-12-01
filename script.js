@@ -59,6 +59,28 @@ const emailValidation = (emailInput) => {
 emailValidation(emailInput);
 
 /**
+ * Déclaration de la fonction arrivalTimeValidation pour la validation du champ arrivalDateInput
+ *  @param {Number} arrivalDateInput
+ */
+const arrivalDateValidation = (arrivalTDateInput) => {
+  // Ecoute de l'événement "change" sur l'input arrivalDateInput
+  arrivalDateInput.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (arrivalTDateInput.value.trim() == "") {
+      arrivalTDateInput.style.borderColor = "var(--red)";
+      arrivalTDateInput.style.color = "var(--red)";
+      return false;
+    } else {
+      arrivalTDateInput.style.borderColor = "var(--green)";
+      arrivalTDateInput.style.color = "var(--green)";
+      return true;
+    }
+  });
+};
+// Appel de la fonction arrivalDateValidation
+arrivalDateValidation(arrivalDateInput);
+
+/**
  * Déclaration de la fonction arrivalTimeValidation pour la validation du champ arrivalTimeInput
  *  @param {Number} arrivalTimeInput
  */
