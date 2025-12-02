@@ -1,5 +1,13 @@
 ## RESERVATION SUITE D'HOTEL
 
+- Page index.html :
+
+![Design preview for the project](./img/banner.png)
+
+- Page booking.html :
+
+![Design preview for the project](./img/banner-2.png)
+
 ## Le challenge
 
 Création d'une page de présentation d'une suite business et d'une page de réservation pour cette même suite d'hôtel en HTML5, CSS3 et JavaScript. Une modale informe de la validation de la réservation.
