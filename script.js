@@ -6,6 +6,8 @@ const arrivalTimeInput = document.querySelector("#time__arrival");
 const departureDateInput = document.querySelector("#departure");
 const departureTimeInput = document.querySelector("#time__departure");
 const submitBtn = document.querySelector(".confirm__btn");
+const modalContainer = document.querySelector(".modal__container");
+const closeModalBtn = document.querySelector(".close__modal");
 
 // Regex
 const regexName = /^[A-Z][A-Za-z\é\è\ê\ô\-]+$/;
@@ -152,6 +154,23 @@ const resetForm = () => {
   window.scrollTo(0, 0);
 };
 
+// Déclaration de la fonction openModal qui va permettre d'ouvrir la modal
+const openModal = () => {
+  // Ajout de la classe active
+  modalContainer.classList.add("active");
+};
+
+// Déclarattion de la fonction closeModal qui va permettre de fermer la modal
+const closeModal = () => {
+  // Ecoute de l'événement "click" sur le bouton close__modal
+  closeModalBtn.addEventListener("click", () => {
+    // Retrait de la classe active
+    modalContainer.classList.remove("active");
+    // Appel de la fonction resetForm()
+    resetForm();
+  });
+};
+
 // Déclaration de la fonction submitForm qui va gérer la soumission du formulaire
 const submitForm = () => {
   // Ecoute de l'événement "click" sur le bouton submitBtn
@@ -178,11 +197,10 @@ const submitForm = () => {
         departureTime: departureTimeInput.value,
       };
       console.log(contact);
-      alert(
-        "Réservation confirmée ! Nous allons vous envoyer un mail de confirmation sous 24 heaures. Cordialement."
-      );
-      // Appel de la fonction resetForm()
-      resetForm();
+      // Appel de la fonction openModal()
+      openModal();
+      // Appel de la fonction closeModal()
+      closeModal();
     }
   });
 };
