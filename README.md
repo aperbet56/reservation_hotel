@@ -2,11 +2,11 @@
 
 ## Le challenge
 
-Création d'une page de présentation d'une suite business et d'une page de réservation pour cette même suite d'hôtel en HTML5, CSS3 et JavaScript.
+Création d'une page de présentation d'une suite business et d'une page de réservation pour cette même suite d'hôtel en HTML5, CSS3 et JavaScript. Une modale informe de la validation de la réservation.
 
 ## Démonstration
 
-Lien vers le projet :
+Lien vers le projet : https://aperbet56.github.io/reservation_hotel/
 
 ## Projet développé avec
 
@@ -26,3 +26,4 @@ Lien vers le projet :
 - Code JavaScript commenté
 - Regex
 - Méthode test pour les regex
+- Fenêtre modale
