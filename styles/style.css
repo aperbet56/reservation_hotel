@@ -24,6 +24,13 @@
 .container__image img,
 .container__details {
     border-radius: 12px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container__image :hover,
+.container__image img :hover,
+.container__details:hover {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
 /**** aside container__details ****/
